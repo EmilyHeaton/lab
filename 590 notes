@@ -1,0 +1,24 @@
+Data_Stewardship_Notes
+
+Using R; notes go with the 590 r script and class slides
+
+Sept. 28, 2016
+- base R package is good for basic things like getting data into and out of R
+Assigning Variables:
+in R, <- is similar to =. This thing on the left, is the name of this thing on the right. E.g, x<-10, means that the number 10 is called the variable x. This is useful, because you can do a change to a value, like calculate dry matter, then do analysis on that dry matter without recalculating dry matter each time. Should make calculations go faster.
+Naming variables:
+- be consistent with variable naming. prefer snake_case, where words are separated by _.
+
+Vectors: can store multiple values as vectors
+Sequences:
+- how to make a sequence? don't want to write 1, 2, 3, 4, 5, 6, 7, 8, 9; so can do a vector. Vectors are just a string of numbers. 
+Data frames hold data sets, and each column in a spreasheet is a vector. Rows are observations and variables are vectors. In R, data frames are what we call where we keep our data (a tidy spreadsheet).
+- the $ specifies which column we want.
+
+Missed 2 classes
+
+Oct. 5, 2016
+classes can be really confusing
+- very important to check your working directory to import data. Use getsd() to find your working directory and setwd() to change it. In R studio, go to session and set it to source file location (might have to make a separate folder there to keep code separate from data)
+
+Lists: you can put anything in them, but they can mess R up. Use data frames (they are a special kind of list); avoiding using lists if you want things to run smoothly.
