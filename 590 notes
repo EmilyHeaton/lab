@@ -22,3 +22,16 @@ classes can be really confusing
 - very important to check your working directory to import data. Use getsd() to find your working directory and setwd() to change it. In R studio, go to session and set it to source file location (might have to make a separate folder there to keep code separate from data)
 
 Lists: you can put anything in them, but they can mess R up. Use data frames (they are a special kind of list); avoiding using lists if you want things to run smoothly.
+
+Oct. 14: when you are using R, make sure you have the dplyr package! It makes it much easier to select data with faster, more intuitive sytnax. make sure it is installed (go up to tools menu, install packages, and search dplyr). when you use R studio, you can use any syntax for installed and activated packages. Dplyr uses more intuitive verbs (functions) that happen to also be the same ones used in SQL, so added bonus you solidfy some vocab.
+
+I should use pipes! the pipe: %>% (see slides from today and script_verb) can be super powerful. allows you to string together operations sequentially. always asks for the data first: take the data, and then do... Always say 'and then' in your head. 
+Don't bother using the cleaning techniques we learned about Oct. 11! ONLY USE DPLYR AND THE PIPE FUNCTION! will allow you to manipulate your data using real words, without making a bunch of extra tables each time you need to do something to your table. it takes your data, and metaphorically puts it through a pipe. And, after you do a bunch of operations, you can rename your now manipulated data by typing ->name.
+
+DON'T install plyr; it doesn't get along with dplyr. I won't likely ever need plyr. plyr is good for lists and dplyr is not, but i will probably only ever need dataframes, which dplyr does. should i have a need for lists, there are other packages i can install that can do lists with dplyr (purrr), or Andee can show me a trick of how to do it.
+
+Take homes for me from this class so far:
+1) Github can be a good place to store data manipulation records, and a good tool to work with others. Has version control. use for scripts and small data sets (frames) but not for archiving huge data sets. its where you store your development work, not where you store the data.
+2) always keep data in the same folder as the analysis, so you can run code and it will find data because they are in the same directory
+3) I should only try to use R through R Studio; it makes everything easier, and will organize all R packages i have into a common framework, as well as help me find and support packages.
+4) i should always have/use the dplyr package; it uses much more intuitive language than other R packages.
