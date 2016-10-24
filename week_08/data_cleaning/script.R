@@ -2,13 +2,20 @@
 
 #First, read it in to make it a dataframe with one header
 #Select the line with the most useful information 
+<<<<<<< HEAD
 header_weather<-scan("weather.txt",skip = 1, sep= "\t", nlines = 1, what= character())
 #Select all the data
 weather<-read.table("weather.txt", skip= 4, na.strings = "?", sep = "\t", stringsAsFactors = FALSE)
+=======
+header_weather<-scan("weather.txt", skip = 1, sep = "\t", nlines = 1,  what = character())
+#Select all the data
+weather<-read.table("weather.txt", skip = 4, na.strings = "?", sep = "\t", stringsAsFactors = FALSE)
+>>>>>>> a2a1f11158368e31f08bbadc082c40b14088d9a8
 #Put the header and the data together
 names(weather)<-header_weather
 
-#Lets just work with time, total rainfall, total solar radiation, max air temp, and min air temp -- select these columns
+#Lets just work with time, total rainfall, total solar radiation, max air temp, 
+  #and min air temp -- select these columns
 
 weat<- weather[,c(1,6,10,11,13)]
 
@@ -18,8 +25,13 @@ names(weat)<- c("date", "total_rain_in", "total_rad_MJ", "max_temp_F", "min_temp
 
 #Filter the data to make sure you have reasonable values
   #Between 0 and 6 for total rain
+<<<<<<< HEAD
   #Between 30 and 70 for total radiation
   #Between 0 and 100 for max temps
+=======
+  #Between 7 and 30 for total radiation
+  #Between -50 and 120 for max temp and -70 and 95 for min temps
+>>>>>>> a2a1f11158368e31f08bbadc082c40b14088d9a8
   #max temp cannot be lower than min temp
 
 temp<-weat[weat$total_rain_in %in% c(0:6),]
